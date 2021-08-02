@@ -1,235 +1,119 @@
-\chapter{What are Pairs of Boosted Higgs Bosons? (The Standard Model of Particle Physics and Minimal Extensions)}
+\chapter{Beyond the Standard Model}
 \label{chap:two}
+In the last chapter we discussed the major parts of the SM, detailed some of the rules for working with it, and then talked briefly about what has been left out.
+The SM itself actually imposes many constraints, so any BSM theory must conform to those constraints. It should also be pointed out that there have been many searches, but very little evidence, of BSM physics.
+This does not exclude BSM physics, it just creates another set of constraints that must be satisfied along with the constraints already set by the SM. One of the most pressing questions about the SM, and one of the most relevant for the following experiment, is called the hierarchy problem.
 
-% Introduction
-\sect{\lipsum*[10][1]}
+\section{The Hierarchy Problem}
 
-\subsect{\lipsum*[10][2]}
+To understand the hierarchy problem, we need to revisit the Higgs boson feynman diagrams. If you recall, we can build up diagrams by adding vertices together. This then is a valid diagram between 4 particles that is mediated by a Higgs boson:
+\begin{figure} %  figure placement: here, top, bottom, or page
+    \centering
+       \feynmandiagram[horizontal=a to b] {
+          i1  [particle=1] -- [fermion] a -- [fermion] i2  [particle=2],
+          a -- [scalar, edge label=Higgs] b, 
 
-\lipsum[1-2]
+          f1  [particle=3] -- [fermion] b -- [fermion] f2  [particle=4],
+       };
+    \caption{A tree level Higgs diagram}
+    \label{fig:fig_2-1}
+ \end{figure}
 
-\subsect{\lipsum*[10][3]}
+Figure \ref{fig:fig_2-1} is what we call a ``tree level'' diagram. We can add possible interactions in the middle of the tree diagram creating what are called ``loops'', like in figure \ref{fig:fig_2-2}.
 
-\lipsum[3-5]
+\begin{figure} %  figure placement: here, top, bottom, or page
+    \centering
+       \feynmandiagram[horizontal=b to c] {
+          i1  [particle=1] -- [fermion] a -- [fermion] i2  [particle=2],
+          a -- [scalar] b,
+          b -- [fermion,half left,looseness=1.5] c-- [fermion,half left,looseness=1.5] b,  
+          c -- [scalar] d,
+          f1  [particle=3] -- [fermion] d -- [fermion] f2  [particle=4],
+       };
+    \caption{A loop level Higgs diagram}
+    \label{fig:fig_2-2}
+ \end{figure}
 
-\subsect{\lipsum*[10][4]}
+Since all we do is measure the incoming and outgoing particles, we do not know which of the diagrams is physically happening. 
+The SM starts with what we call a ``bare'' mass term, in this case $m_H^{bare}$, and then when adding loops\footnote{This process of adding loops can create some wacky looking diagrams. However, even wacky diagrams can be experimentally relevant.}, it makes quantum corrections to the bare mass.
+So, the mass we measure is actually:
+\begin{equation}
+    m_H = m_H^{bare} \times ( 1 + \sum_{\text{all loops}} \text{quantum loop corrections} ) 
+    \label{eq:eq_bareMH}
+\end{equation}
+The Higgs boson is a scalar, which for our purposes, means that when adding up the corrective terms, they do not start cancelling each other out in a well controlled manner.
+Since we do measure a consistent Higgs mass, theoretically it is not satisfactory that we cannot predict this mass in the SM due to the lack of control of the quantum correction terms.
+The reason that this is a problem is that in the theoretical calculations of these quantum corrections, the Higgs mass is quadratically sensitive to any scale that you introduce to the theory.
+Energy scales are introduced to quantum corrections in order to carry out a process called renormalization. Simply stated, renormalization is the process by which we can remove any non-physical values, i.e infinities, that show up in our calculations.
+This happens frequently when calculating quantum corrections so if when we try to renormalize our quantum corrections but the terms only grow in relative size, there will be a problem when we try to take a large sum of ALL possible corrections to the Higgs bare mass.
+In this case, the infinities that we tried to regulate will show up all over again. Again, since we can measure the Higgs mass, and it is definitely NOT infinity, we need to find a way to control these quantum corrections, which is where BSM physics comes in.
+\section{Possible Solutions to the Hierarchy Problem}
 
-\lipsum[6-7]
+There are several theoretical models that propose solutions that solve the hierarchy problem. We will not detail all of these proposals, as that would take a thesis of its own. 
+Here we will give an overview of the two solutions that are most relevant to our experiment. They are Warped Extra Dimensions (WED) and Minimal Supersymmetric extensions to the SM (MSSM).
 
-\subsect{\lipsum*[10][5]}
+\subsection{Warped Extra Dimensions}
 
-\lipsum[9-10]
+In classical physics, the notions of space and time are fixed to 4 dimensions, 3 space and 1 time.
+In quantum physics, there is no a priori reason we cannot consider additions to the amount of spacetime dimensions.
+After Einstein's newly introduced theory of 4-D spacetime, the General Theory of Relativity, researchers started asking if it was possible that what we see as 4-D spacetime is really 5-D, where the 5th dimension is compactified or warped in some way as to avoid easy detection.
+The first of these theories is called Kaluza-Klein Theory and was originally published by Kaluza in 1921. This theory was originally unused as it did not offer many testable predictions. However, there have been many improvements in recent decades.
 
-\subsect{\lipsum*[10][6]}
+One of the recent improvements, indeed the one that is most experimentally relevant to us, is WED. 
+The WED models have an extra spatial dimension compactified between two branes, with the region between (called the bulk) warped via an exponential metric ${\kappa l}$, $\kappa$ being the warp factor and $l$ the coordinate of the extra spatial dimension~\cite{Giudice:2000av}. 
+For our purposes, we can think of branes as the ``boundaries'' to the spacetime in which we live. They are lower dimensional spaces that are dynamic and can effect the fields that propagate the forces we see in nature.
+In these WED models, we can think of the ``low energy'' versions of our theories, i.e. the SM, as ``living'' on one brane. Here living on a brane means that the fields in the field theory do not propagate into all of the available spatial dimensions, in this case the bulk.
+Then the ``high energy'' versions will live on the other and the bulk will mediate between them. The original version of these theories had only gravity propagating in the bulk, but that it is not the only thing that may propagate in the bulk of a WED theory \footnote{Other particles, namely SM fermions and bosons can propagate in the bulk.}.
+In the literature, the ``low energy'' brane is called the infrared (IR) brane and the ``high energy'' brane is called the ultraviolet (UV) brane. 
+These two scales, UV and IR, are very important for theoretical discussions of the behavior of SM theories. Since we will not delve into those details, I described what they are for your future reference.
 
-\lipsum[11-12]
+In WED models, there can exist excitations, which is the mathematical way we think of particles in their respective fields, that are of the type described in Kaluza-Klein theory, so called KK excitations, and which propagate in the bulk.
+The prediction from WED is that these excitations will be spin-2 bosons called KK gravitons. These would mediate gravity in the bulk and be a way to incorporate gravity into the SM. 
+They also predict spin-0 particles, called radions, which are scalar versions of gravitons. 
+These KK gravitons and radions are predicted to interact with the weak force which in turn allows them to interact with the SM Higgs boson and give them mass.
 
-% Materials and Methods
-\sect{\lipsum*[11][1]}
+The radion serves another purpose. One question you might have thought to ask is, what is the size of the extra dimension that you keep talking about? 
+If it is so small that we do not detect it, then how small is small enough to be undetectable? 
+This is not currently known, however, the radion is produced from spontaneous symmetry breaking and therefore, takes a VEV.
+This radion VEV then sets the scale of the size of the extra dimension or bulk that is between the UV and IR branes. 
 
-\subsect{\lipsum*[11][2]}
+\subsection{Minimal Supersymmetry}
 
-\lipsum[13]
+Another way we can attempt to solve the hierarchy problem is to introduce a new class of theories called Supersymmetry.
+In supersymmetric theories, each particle has a superpartner particle that is different from the anti-particle.
+These extra particles would add cancelling terms to the equation in \ref{eq:eq_bareMH} which would allow the quantum correction terms to be controlled.
+There are many supersymmetric models, each with small differences to account for the issues seen in the SM. We will not be able to cover all of the known supersymmetry models and will focus on the MSSM models.
 
-\subsect{\lipsum*[11][3]}
+MSSM models make what is called the ``minimal'' extension to the standard model. These minimal extensions take each SM fermion and add a superpartner, known as a sfermion (squarks or sleptions).
+They also take each gauge field \footnote{A gauge field is the mathematical mechanism behind the SM forces. I do not introduce the machinery because it is quite extensive and would be a thesis in itself.} and add a gaugino, which is a propagating fermion for the field.
+While this sounds overly simplistic, it adds its own version of complications after solving the hierarchy problem. 
+For example, if these so called superpartners are just different version of their respective particles, and with the same mass, then we should have discovered them long ago.
+Since we haven't, we must assume that there is a mass scale above which all of these superpartners live. 
 
-\lipsum[13-15]
+Again, there are several ways to accomplish this addition of mass. 
+However, they all involve a form of spontaneous symmetry breaking, recall how the Higgs field picks up a VEV, of the supersymmetry that generates all of these new particles.
+This symmetry breaking is the underlying cause of the masses that these superpartners have. This is also very similar to the case of the electroweak interaction. 
+In both of these cases, in the UV limit of these theories, the symmetry is preserved. As soon as we move from the UV to the IR, the symmatry is broken. 
+The mathematical details here are not necessary for this thesis, so we will skip them. They also contain colloquial language that can be very confusing \footnote{For example, those of you who are theory inclined will recall that Goldstone bosons exist whenever a field breaks a symmetry and generates a VEV. When we promote that symmetry to a gauge symmetry, for some reason it is fashionable to say that the Goldstone boson is ``eaten'', which I found very confusing initially since it implies that the boson disappears instead transforming into the longitudinal polarization for the corresponding gauge field.}. 
 
-\subsect{\lipsum*[11][4]}
+\section{Predictions of WED and MSSM}
+In the standard model (SM), the pair production of Higgs bosons ($\PH$)~\cite{HiggsDiscoveryAtlas,HiggsDiscoveryCMS,CMSHiggsLongPaper} in proton-proton ($\Pp\Pp$) collisions at $\sqrt{s} = 13\TeV$ is a rare process~\cite{deFlorian:2013jea}.
+However, the existence of massive resonances decaying to Higgs boson pairs ($\PH\PH$) in many new physics models may enhance this rate to observable levels, even with current experimental data.
+For instance, WED models~\cite{Randall:1999ee} contain new particles such as the spin-0 radion~\cite{Goldberger:1999uk,Csaki:1999mp,Csaki:2000zn} and the spin-2 first KK excitation of the graviton~\cite{Davoudiasl:1999jd,DeWolfe:1999cp, Agashe:2007zd}, which have sizable branching fractions to $\PH\PH$.
 
-\lipsum[16-18]
+In WED models, the reduced Planck scale ($\overline{\Mpl} \equiv \Mpl/8\pi$, \Mpl being the Planck scale) is considered a fundamental scale.
+The free parameters of the model are $\kappa / \overline{\Mpl}$ and the UV cutoff of the theory $\LambdaR \equiv \sqrt{6} \re^{-\kappa l} \overline{\Mpl}$~\cite{Goldberger:1999uk}.
+In $\Pp\Pp$ collisions, the graviton and the radion are produced primarily through gluon-gluon fusion and are predicted to decay to $\PH\PH$~\cite{Oliveira:2014kla}.
 
-\subsect{\lipsum*[11][5]}
+Other scenarios, such as the two-Higgs doublet models~\cite{Branco:2011iw} (in particular, the minimal supersymmetric model~\cite{Djouadi:2005gj}) and the Georgi-Machacek model~\cite{GEORGI1985463} predict spin-0 resonances that are produced primarily through gluon-gluon fusion, and decay to an $\PH\PH$ pair.
+These particles have the same Lorentz structure and effective couplings to the gluons and, for narrow widths, result in the same kinematic distributions as those for the bulk radion.
 
-\lipsum[19-20]
+% Searches for a new particle $\PX$ in the $\PH\PH$ decay channel have been performed by the
+% ATLAS~\cite{Aad:2014yja, Aad:2015uka, Aad:2015xja} and
+% CMS~\cite{Khachatryan:2014jya, Khachatryan:2015year, Khachatryan:2015tha,Khachatryan:2016sey,Khachatryan:2016cfa}
+% Collaborations in $\Pp\Pp$ collisions at $\sqrt{s} =  7$ and 8\TeV.
+% More recently, the ATLAS Collaboration has published limits on the production of a KK bulk graviton, decaying to $\PH\PH$, in the $\bbbar\bbbar$ final state, using $\Pp\Pp$ collision data at $\sqrt{s} = 13\TeV$, corresponding to an integrated luminosity of 3.2\fbinv~\cite{Aaboud:2016xco}. Because the longitudinal components of the $\PW$ and $\PZ$ bosons couple to the Higgs field in the SM, a resonance decaying to $\PH\PH$ potentially also decays into $\PW\PW$ and $\PZ\PZ$, with a comparable branching fraction for $\PX\to\PZ\PZ$, and with a branching fraction for $\PX\to\PW\PW$ that is twice as large.
+% Searches for $\PX \to \PW\PW$ and $\PZ\PZ$ have been performed by ATLAS and CMS~\cite{ATLASVV,ATLASWV,ATLASZV,Khachatryan:2014hpa,CMSZVWV,ATLAS13TeV_WW_WZ_ZZ_allhad,ATLAS13TeV_WW_WZ_semilep}.
 
-\subsect{\lipsum*[11][6]}
-
-\lipsum[21]
-
-\subsect{\lipsum*[11][7]}
-
-\lipsum[22]
-
-\subsect{\lipsum*[11][8]}
-
-\lipsum[23]
-
-\subsect{\lipsum*[11][9]}
-
-\lipsum[24]
-
-\subsect{\lipsum*[11][10]}
-
-\lipsum[25-27]
-
-\subsect{\lipsum*[11][11]}
-
-\lipsum[28-30]
-
-% Results
-\sect{\lipsum*[12][1]}
-
-\subsect{\lipsum*[12][2]}
-
-\lipsum[31-37]
-
-% Figure 2-1
-\begin{figure}[p] %  figure placement: here, top, bottom, or page
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-1}
-   \includegraphics[scale=1]{fig_2-1}
-   \caption[{\lipsum*[21][1]}]{\lipsum*[21][1-5]}
-   \label{fig:fig_2-1}
-\end{figure}
-
-\subsect{\lipsum*[12][3]}
-
-\lipsum[38-40]
-
-% Figure 2-2
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-2}
-   \includegraphics[scale=1]{fig_2-2}
-   \caption[{\lipsum*[22][1]}]{\lipsum*[22][1-5]}
-   \label{fig:fig_2-2}
-\end{figure}
-
-\subsect{\lipsum*[12][4]}
-
-\lipsum[38-39]
-
-\subsect{\lipsum*[12][5]}
-
-\lipsum[40-42]
-
-% Figure 2-3
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-3}
-   \includegraphics[scale=1]{fig_2-3}
-   \caption[{\lipsum*[23][1]}]{\lipsum*[23][1-5]}
-   \label{fig:fig_2-3}
-\end{figure}
-
-\lipsum[44-49]
-
-\subsect{\lipsum*[12][6]}
-
-\lipsum[50-53]
-
-% Figure 2-4
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-4}
-   \includegraphics[scale=1]{fig_2-4}
-   \caption[{\lipsum*[24][1]}]{\lipsum*[24][1-5]}
-   \label{fig:fig_2-4}
-\end{figure}
-
-% Discussion
-\sect{\lipsum*[13][1]}
-
-\lipsum[54-60]
-
-% Figure 2-5
-\begin{figure}[tb]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-5}
-   \includegraphics[scale=1]{fig_2-5}
-   \caption[{\lipsum*[25][1]}]{\lipsum*[25][1-5]}
-   \label{fig:fig_2-5}
-\end{figure}
-
-\lipsum[59-61]
-
-% Figure 2-6
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-6}
-   \includegraphics[scale=1]{fig_2-6}
-   \caption[{\lipsum*[26][1]}]{\lipsum*[26][1-2]}
-   \label{fig:fig_2-6}
-\end{figure}
-
-% Figure 2-7
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-7}
-   \includegraphics[scale=1]{fig_2-7}
-   \caption[{\lipsum*[27][1]}]{\lipsum*[27][1-2]}
-   \label{fig:fig_2-7}
-\end{figure}
-
-% Figure 2-8
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-8}
-   \includegraphics[scale=1]{fig_2-8}
-   \caption[{\lipsum*[28][1]}]{\lipsum*[28][1-2]}
-   \label{fig:fig_2-8}
-\end{figure}
-
-% Figure 2-9
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-9}
-   \includegraphics[scale=1]{fig_2-9}
-   \caption[{\lipsum*[29][1]}]{\lipsum*[29][1-2]}
-   \label{fig:fig_2-9}
-\end{figure}
-
-% Figure 2-10
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-10}
-   \includegraphics[scale=1]{fig_2-10}
-   \caption[{\lipsum*[30][1]}]{\lipsum*[30][1-2]}
-   \label{fig:fig_2-10}
-\end{figure}
-
-% Figure 2-11
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-11}
-   \includegraphics[scale=1]{fig_2-11}
-   \caption[{\lipsum*[31][1]}]{\lipsum*[31][1-2]}
-   \label{fig:fig_2-11}
-\end{figure}
-
-% Figure 2-12
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-12}
-   \includegraphics[scale=1]{fig_2-12}
-   \caption[{\lipsum*[32][1]}]{\lipsum*[32][1-2]}
-   \label{fig:fig_2-12}
-\end{figure}
-
-% Figure 2-13
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-13}
-   \includegraphics[scale=1]{fig_2-13}
-   \caption[{\lipsum*[33][1]}]{\lipsum*[33][1-2]}
-   \label{fig:fig_2-13}
-\end{figure}
-
-% Figure 2-14
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-14}
-   \includegraphics[scale=1]{fig_2-14}
-   \caption[{\lipsum*[34][1]}]{\lipsum*[34][1-2]}
-   \label{fig:fig_2-14}
-\end{figure}
-
-% Figure 2-15
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-15}
-   \includegraphics[scale=1]{fig_2-15}
-   \caption[{\lipsum*[35][1]}]{\lipsum*[35][1-2]}
-   \label{fig:fig_2-15}
-\end{figure}
+% This analysis note reports on the search for a massive resonance decaying to an $\PH\PH$ pair, in the $\bbbar\bbbar$ final state (with a branching fraction $\approx$33\%~\cite{deFlorian:2016spz}), performed using a data set corresponding to \intLumi of $\Pp\Pp$ collisions at $\sqrt{s} = 13\TeV$.
+% This search significantly improves upon the CMS analyses performed using the LHC data collected at $\sqrt{s} = 13$ in 2016~\cite{B2G-16-026-paper,B2G-17-019-paper}.

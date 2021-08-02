@@ -16,9 +16,10 @@
 \documentclass[12pt]{report}
 
 % PDF Creation settings
-\pdfcompresslevel=9
-\pdfminorversion=5
-\pdfobjcompresslevel=2
+% \pdfcompresslevel=9
+% \pdfminorversion=5
+% \pdfobjcompresslevel=2
+
 
 % Needed to create a PDF/A file
 \usepackage[a-1b]{pdfx}
@@ -26,7 +27,7 @@
 % Incude pdf docs
 \usepackage{pdfpages}
 % For transferring hyperlinks from PDFs added by pdfpages
-\usepackage{pax}
+% \usepackage{pax}
 
 % For dialect-specific hyphenation etc.
 \usepackage[american]{babel}
@@ -60,6 +61,9 @@
 
 % Spacing options
 \usepackage{setspace}
+
+%Use for indent of first paragraphs
+\usepackage{indentfirst}
 
 % Typography and fonts
 \usepackage[protrusion]{microtype}
@@ -152,9 +156,9 @@
 \usepackage{enumitem}
 
 % Graphics Packages
-%\usepackage{graphics} 
+\usepackage{graphics} 
 \usepackage{graphicx}
-%\usepackage{float}
+\usepackage{float}
 
 % Setup style for figure captions
 \usepackage[font=small,
@@ -174,7 +178,7 @@
 \usepackage[all]{hypcap}
 
 % Graphics Path
-\graphicspath{{figures/}}
+\graphicspath{{Figures/}}
 
 % To change the name of the figures page
 \renewcommand{\listfigurename}{Figures}
@@ -186,12 +190,18 @@
 \setlength{\cftfignumwidth}{\widthof{\textbf{Figure~5-10~}}}
 
 % Tikz, for drawing vector graphics
-%\usepackage{tikz}
-%\usetikzlibrary{positioning}
-%\usetikzlibrary{shapes,arrows}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes,arrows}
 
 % Enable the glossary
 %\makeglossary
+
+% include for Feynman diagrams
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+% To add subfigures
+\usepackage{subcaption}
 
 % Make appendices
 %\usepackage[title,titletoc]{appendix}
@@ -226,7 +236,7 @@ natbib = true
 ]{biblatex}
 
 % Point to bibfile
-\addbibresource{classics.bib}
+\addbibresource{mwe.bib}
 
 % If you want to exclude some portions from the bibliography
 %\AtEveryBibitem{
@@ -256,13 +266,74 @@ natbib = true
 %\makeatother
 
 % Math
-%\usepackage{amsmath,amssymb,array}
+\usepackage{amsmath,amssymb,array}
+\usepackage{xspace}
+
 
 %\newcommand{\bm}[1]{ \mbox{\boldmath $ #1 $} }
 %\newcommand{\bin}[2]{\left(\begin{array}{@{}c@{}} #1 \\ #2
 %             \end{array}\right) }
 % A math shortcut frequently used by John Muschelli
 %\newcommand{\bbeta}{\mbox{\boldmath $\beta$}}
+
+%%%%%%%%%%%%% local definitions %%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\PH}{\ensuremath{H}\xspace}
+\newcommand{\Pp}{\ensuremath{p}\xspace}
+\newcommand{\PX}{\ensuremath{X}\xspace}
+\newcommand{\PZ}{\ensuremath{Z}\xspace}
+\newcommand{\PW}{\ensuremath{W}\xspace}
+\newcommand{\cPqb}{\ensuremath{b}\xspace}
+\newcommand{\cPqt}{\ensuremath{t}\xspace}
+\newcommand{\Pqb}{\ensuremath{b}\xspace}
+\newcommand{\re}{\ensuremath{e}}
+
+
+\newcommand{\bbbar}{\ensuremath{b \bar{b}}\xspace}
+\newcommand{\Mpl}{\ensuremath{{M_\mathrm{Pl}}}\xspace}% Planck mass
+\newcommand{\fbinv}{\mbox{\ensuremath{\,\text{fb}^{-1}}}\xspace}
+\newcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
+\newcommand{\Hbb}{\ensuremath{\mathrm{H}\rightarrow\cPqb\overline{\cPqb}}\xspace}
+\newcommand{\ttjets}{\ensuremath{\cPqt\overline{\cPqt}}+jets\xspace}
+\newcommand{\wjets}{\PW+jets\xspace}
+\newcommand{\bjet}{\cPqb~jet\xspace}
+\newcommand{\bjets}{\cPqb~jets\xspace}
+\newcommand{\sm}{the standard model\xspace}
+\newcommand{\mc}{Monte Carlo\xspace}
+\newcommand{\com}{13~\TeV\xspace}
+\newcommand{\intLumi}{137\fbinv\xspace}
+
+\newcommand{\Hbbt}{double \cPqb\,tagger\xspace}
+\newcommand{\Sjbt}{subjet \PQb\,tagger\xspace}
+\newcommand{\GRS}{\ensuremath{\mathrm{G}_\mathrm{RS}}\xspace}
+\newcommand{\mjjs}{\ensuremath{M_{\textrm jjj}^{\textrm red}}\xspace}
+\newcommand{\Mjjs}{\ensuremath{M_{\textrm jjj}^{\textrm red}}\xspace}
+\newcommand{\mjj}{\ensuremath{M_{\textrm jjj}}\xspace}
+\newcommand{\Mjj}{\ensuremath{M_{\textrm jjj}}\xspace}
+\newcommand{\mH}{\ensuremath{M_{\textrm \PH}}\xspace}
+\newcommand{\mx}{\ensuremath{M_{\textrm X}}\xspace}
+\newcommand{\mux}{\ensuremath{\mu_{\textrm X}^{\textrm CB}}\xspace}
+\newcommand{\nsub}{\ensuremath{\tau_{21}}\xspace}
+\newcommand{\etaj}{\ensuremath{|\eta|}\xspace}
+\newcommand{\deta}{\ensuremath{|\Delta\eta_{\textrm jj}|}\xspace}
+\newcommand{\mjp}{\ensuremath{M_{\textrm jet}^{\textrm pruned}}\xspace}
+\newcommand{\mjsd}{\ensuremath{M_{\textrm jet}^{\textrm softdrop,puppi}}\xspace}
+\newcommand{\mj}{\ensuremath{M_{\textrm jet}}\xspace}
+\newcommand{\LambdaR}{\ensuremath{\Lambda_{\textrm R}}\xspace}
+\newcommand{\HH}{\PH\PH}
+\newcommand{\sgx}{\ensuremath{\sigma_{\textrm X}^{\textrm gaus}}\xspace}
+\newcommand{\scbx}{\ensuremath{\sigma_{\textrm X}^{\textrm CB}}\xspace}
+\newcommand{\HbbHbb}{\ensuremath{\mathrm{\Hbb\Hbb}}\xspace} 
+\newcommand{\XHbbHbb}{\ensuremath{\mathrm{X}\rightarrow\PH\PH\rightarrow\bbbar\bbbar}\xspace}
+\newcommand{\mjred}{\ensuremath{M_{\textrm j}}\xspace}
+\newcommand{\mred}{\ensuremath{M_{\textrm jj}^{red}}\xspace}
+\newcommand{\rpfmc}{\ensuremath{R^\mathrm{MC}_\mathrm{P/F}(\mjred,\mred)}\xspace}
+\newcommand{\rpfdata}{\ensuremath{R^\mathrm{data}_\mathrm{P/F}(\mjred,\mred)}\xspace}
+\newcommand{\rrat}{\ensuremath{R_\mathrm{ratio}(\mjred,\mred)}\xspace}
+
+
+
+
 
 %%%%%%%%%%%
 % CONTENT %
@@ -333,17 +404,22 @@ natbib = true
 %\end{refsection}
 %
 %\begin{refsection}[myrefs.bib]
-\include{text/10-chapter-4-hh4b}
+\include{text/14-chapter-4-tagging}
 %\printbibliography[title={References}]
 %\end{refsection}
 %
 %\begin{refsection}[myrefs.bib]
-\include{text/12-chapter-5-extensions}
+\include{text/10-chapter-5-hh4b}
 %\printbibliography[title={References}]
 %\end{refsection}
 %
 %\begin{refsection}[myrefs.bib]
-\include{text/11-chapter-6-discussion-conclusions}
+\include{text/12-chapter-6-extensions}
+%\printbibliography[title={References}]
+%\end{refsection}
+%
+%\begin{refsection}[myrefs.bib]
+\include{text/11-chapter-7-discussion-conclusions}
 %\printbibliography[title={References}]
 %\end{refsection}
 %

@@ -1,190 +1,258 @@
-\chapter{How to find Pairs of Boosted Higgs Bosons (The CMS Detector at CERN)}
+\chapter{The CMS Detector at the LHC, CERN}
 \label{chap:three}
 
-% Introduction
-\sect{\lipsum*[20][1]}
+The way we probe the mysteries of particle physics has, in principle, not changed much since it started.
+The basic premise is what has been called the ``reductionist'' approach. 
+This approach tries to reduce everything to its most fundamental parts.
+It has been very successful in the field of particle physics. We once thought of protons as fundamental particles, but were able to discover they are composite by continually smashing things together at higher energies.
 
-\subsect{\lipsum*[20][2]}
+The act of smashing particles together is the mechanism of particle physics. 
+One needs to decide at what energies they will be smashed together, how the particles will be controlled, whether or not one is fixed in place initially, and a whole host of other factors.
+These will effect what particles you can smash and what new particles you might expect to see from this collision.
 
-\lipsum[1-3]
+Nature itself actually provides a useful laboratory to start this type of research program.
+One of the early particles that started helping physicists start filling out the SM was the muon ($\mu$).
+Muons are produced in nature when a positron is accelerated by the sun's atmosphere and launched at earth.
+The positron then collides with one of the electrons in an atom. These two would then annihilate and become a very energetic photon.
+This photon will have so much energy that it is very likely to decay into something heavier than the electron/positron pair, a pair muons for example.
+Through this mechanism, muons actually are constantly being made in the upper atmosphere and shooting down to earth. 
+We are able to detect them because they travel close enough to the speed of light that time dilation causes them to last long enough before they decay.
+In theory, other heavy particles could be produced this way but they do not last long enough in order for them to reach the surface \footnote{One can even turn a modern cell phone into a muon detector. There are apps that can register the passing of a muon through the CMOS sensor in your phone's camera.}.
 
-\subsect{\lipsum*[20][3]}
+Since we cannot rely on nature to make experimental labs for us, we need to make them ourselves.
+The first thing to consider is how to construct the collider. In linear colliders, one side fires a beam of particles at a beam of particles fired from the other side.
+The downside here is that the majority of the particles will pass by each other and not collide. The next thing we can do to alleviate this is to turn to circular colliders.
+In circular colliders, if some particles are not used in the initial collision, they can be recycled until they are used.
+This efficiency comes at a cost because particles radiate when being turned by an electromagnetic field. The equation for this is"
+\begin{equation}
+    P = \frac{e^4}{6 \pi m^4 c^5} E^2 B^2
+\end{equation}
+where $E$ and $B$ are the strengths of the respective electric and magnetic fields used to turn and focus the beams of particles.
+Since the power here is inversely proportional to mass, it is actually better to collide heavier particles rather than lighter ones \footnote{For example, if we collide protons instead of electrons, the power produced by radiation is reduced by $10^{13}$}. 
+This is the idea behind the Large Hadron Collider. By balancing the energy needed to collide a heavier particle with the energy saved by colliding a heavier particle, it was determined that colliding protons together would allow physicists to reach energies needed to probe the scale of physics that CERN was hoping to achieve.
 
-\lipsum[4-5]
+\section{The Large Hadron Collider}
 
-\subsect{\lipsum*[20][4]}
+The Large Hadron Collider (LHC) is the biggest particle collider, indeed the biggest machine, ever built.
+It has produced more data than all other particle experiments combined \footnote{The LHC has produced over 130 PB of data so far.}.
+It is a 27 km ring with several smaller rings which feed the proton beams into the LHC in stages.
+The main ring has 1,232 dipole magnets that keep the protons in the ring and accelerate them.
+It also has 392 quadrupole magnets that focus the beams of protons. The magnetic fields needed to achieve this are some of the strongest ever made coming in at 7 Tesla.
+These can only be made by superconducting magnets that are cooled to below 2 Kelvin.
+This amount of cooling requires around 100 tonnes of superfluid liquid helium to achieve.
+The LHC currently collides protons at a center of mass energy of $13 TeV$ but will be upgraded to achieve higher energies in the future.
+It should be noted that the beams of protons are not continuous. They come in ``bunches'' which consist of about 115 billion protons in each bunch.
+The bunches collide at 4 different points, corresponding to the 4 experiments that the LHC powers, and collide every 25 nanoseconds.
+This means there are roughly 40 Million collisions every second. 
 
-\lipsum[7-8]
+\begin{figure} %  figure placement: here, top, bottom, or page
+    \centering
+ %   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-1}
+    \includegraphics[scale=0.3]{LHC.png}
+    \caption{Left: A diagram of the LHC and its rings.\\ Right: An overhead picture of the LHC where you can see Lake Geneva on top of it.}
+    \label{fig:fig_3-1}
+ \end{figure}
 
-\subsect{\lipsum*[20][5]}
+ \begin{figure} %  figure placement: here, top, bottom, or page
+    \centering
+ %   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-1}
+    \includegraphics[scale=0.4]{quadrupoleField.png}
+    \caption{The quadrupole magnetic field that allows the proton beams to be focused in both horizontal and vertical directions.}
+    \label{fig:fig_3-2}
+ \end{figure}
 
-\lipsum[10-12]
 
-% Figure 3-1
-\begin{figure}[tb]
+\subsection{Proton-Proton Collisions at the LHC}
+I previously had said that the proton was made up of a combination of up and down quarks. This is actually an oversimplification of the inside of a proton.
+In order for us to understand why one would want to smash protons together we need to get into some of the details about the proton.
+While it is true that the proton has two up and one down quark, the interactions between those quarks are dynamic and make up the rest of the picture of the inside of the proton.
+There is not actually one gluon per pair of quarks, as one might have thought, but a whole web of gluons that interact with each other and the up and down quarks.
+The gluons also interact with each other which creates pairs of quarks of all types that then decay back into gluons. 
+This is a very important distinction because it powers the modern program of particle physics.
+When two protons collide, at the energies of the LHC, we are actually smashing together all of the quarks and gluons currently present in those protons.
+In this ``soup'' of interactions, we collectively call the gluons and quarks ``partons''.
+
+The next important question is to ask what was actually collided in a given proton-proton collision.
+We just said that it can be a complicated interaction of quarks and gluons that is not predetermined so how do we solve this problem.
+What we end up doing is relying on something called the Parton Distribution Function\footnote{This is usually abbreviated as PDF.}. 
+Instead of trying to find out collision by collision what has happened, we use the PDF to create a statistical model that can give us an expectation.
+The PDF models are very important for discovering new physics because many predicted new particles happen under only specific interactions.
+Therefore, if we do not know what to expect coming out of a proton-proton collision at a given energy, then we cannot know where to look for any undiscovered particle.
+Unfortunately, PDFs are very hard to compute. What we end up doing is combining partial combinations with high precision measurements from fixed target colliders in order to approximate the true PDF.
+Since it is only an approximation, we end up have to assign a systematic error to the PDF based on the variance of likely PDFs. 
+This will be a theme we revisit again and again. We will try to make a measurement, only be able to approximate it, and therefore we will need to assign systematic uncertainty.
+
+\section{The Compact Muon Solenoid Detector}
+There are 4 detector experiments at the LHC. The Compact Muon Solenoid (CMS), shown in Figure \ref{fig:fig_3-3}, is the detector that took the data we are using to perform this analysis.
+While it is quite massive compared to a human, weighing in at 14,000 tons, it is actually smaller than the other detectors.
+Once again, a full description of CMS and the work done by over 5000 scientists would take many more pages to write so we will confine our discussion to a small overview just to make sure the main parts of the detector are understood.
+
+\begin{figure} %  figure placement: here, top, bottom, or page
    \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_3-1}
-   \includegraphics[scale=1]{fig_3-1}
-   \caption[{\lipsum*[31][1]}]{\lipsum*[31][1-5]}
-   \label{fig:fig_3-1}
-\end{figure}
-
-% Materials and Methods
-\sect{\lipsum*[21][1]}
-
-\subsect{\lipsum*[21][2]}
-
-\lipsum[13]
-
-\subsect{\lipsum*[21][3]}
-
-\lipsum[14-15]
-
-\subsect{\lipsum*[21][4]}
-
-\lipsum[16-17]
-
-\subsect{\lipsum*[21][5]}
-
-\lipsum[18]
-
-\subsect{\lipsum*[21][6]}
-
-\lipsum[19-20]
-
-\subsect{\lipsum*[21][7]}
-
-\lipsum[21]
-
-\subsect{\lipsum*[21][8]}
-
-\lipsum[22]
-
-\subsect{\lipsum*[21][9]}
-
-\lipsum[23-24]
-
-\subsect{\lipsum*[21][10]}
-
-\lipsum[25-26]
-
-\subsect{\lipsum*[21][11]}
-
-\lipsum[27-28]
-
-\subsect{\lipsum*[21][12]}
-
-\lipsum[29-30]
-
-\subsect{\lipsum*[21][13]}
-
-\lipsum[31]
-
-% Results
-\sect{\lipsum*[22][1]}
-
-\subsect{\lipsum*[22][2]}
-
-\lipsum[27-32]
-
-% Figure 3-2
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_3-2}
-   \includegraphics[scale=1]{fig_3-2}
-   \caption[{\lipsum*[32][1]}]{\lipsum*[32][1-5]}
-   \label{fig:fig_3-2}
-\end{figure}
-
-\subsect{\lipsum*[22][3]}
-
-\lipsum[33-35]
-
-% Figure 3-3
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_3-3}
-   \includegraphics[scale=1]{fig_3-3}
-   \caption[{\lipsum*[33][1]}]{\lipsum*[33][1-5]}
+%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_2-1}
+   \includegraphics[scale=0.043]{cmsDetector.png}
+   \caption{A detailed cross section of the CMS detector.}
    \label{fig:fig_3-3}
 \end{figure}
 
-\subsect{\lipsum*[22][4]}
+\clearpage
+\subsection{Coordinate System}
+CMS is essentially a large tube where both ends are covered. In order to describe this geometry, we use a modified spherical coordinate system.
+The angles used are $\eta$ and $\phi$ where $\phi$ creates the circular component of the cylinder, and will always be perpendicular to the beam.
+$\eta$ is defined as:
+\begin{equation}
+   \eta = -ln  \left( tan \frac{\theta}{2} \right)
+\end{equation} 
+and is also known as the \textit{pseudorapidity}. Here $\theta$ is the usual angle from spherical coordinates. 
+In these coordinates, $\eta = 0$ points straight out of the detector and $\eta = \inf$ points directly along the beampipe.
+One reason to use these coordinates is that $\eta$ is approximately Lorentz invariant \footnote{This means that it does not change depending on the reference frame in which we are looking at the interaction. It is always good to work with Lorentz invariant quantities in physics.}
+This is necessary because while the protons themselves will have the same energy and likely be symmetric, there is no such guarantee with the partons. 
+When we are talking about particles in the detector, we usually talk about them in terms of three values: radial angle $\phi$, pseudorapidity $\eta$, and transverse momentum $p_T$.
+If one is interested in returning to Cartesian coordinates, which we are almost never going to do, the following equations will accomplish this task:
+\begin{equation}
+   p_x = p_T cos(\theta) \quad p_y = p_T sin(\theta) \quad p_z = p_T cosh(\eta)
+\end{equation}
 
-\lipsum[36-37]
+\subsection{The Tracker}
+The first layer that a particle shot out of a proton-proton collision would encounter is called the Silicon Tracker. 
+This layer is directly on the beampipe and consists of 13 individual layers surrounding the beampipe and 14 layers in the endcaps.
+These individual layers are bunched together and the first 4 are made up of 66 million silicon pixels that are 100 x 150 $\mu m$ in area. The rest of the layers are made of strip pixels which are longer than the first set.
+All of this makes for 200 square meters of silicon that will measure the momentum of any charged particle moving through it.
 
-% Figure 3-4
-\begin{SCfigure}[\sidecaptionrelwidth][p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_3-4}
-   \includegraphics[scale=0.90]{fig_3-4}
-   \caption[{\lipsum*[34][1]}]{\lipsum*[34][1-5]}
-   \label{fig:fig_3-4}
-\end{SCfigure}
+A magnetic field is applied throughout the silicon tracker which causes any charged particle to curve.
+We can then measure the momentum because it will deposit charge on the way through each layer of the silicon tracker. 
+With these ``hits'', we can reconstruct the path and therefore the curvature which will allow us to calculate its charge and energy.
+The reconstruction of the hits in the silicon tracker of individual particles are called tracks and are determined to an accuracy of about 10 $\mu m$.
+The silicon tracker, unlike the rest of the detector, does not try to stop any particle, just measure it as it is shooting towards the calorimeters
 
-\subsect{\lipsum*[22][5]}
+\subsection{The Calorimeters}
 
-\lipsum[38-40]
+After we get an idea of how a particle is moving through the detector, we need to start attempting to identify it.
+If you are thinking that the information from the tracker can be used to help identify any particle then you would be correct.
+However, we have seen that different types of particles will interact in different ways. 
+Most notably, some particles are much heavier than others.
+The first layer outside of the tracker is called the Electromagnetic Calorimeter (ECAL) and is designed to allow photons and electrons to deposit their energy in this layer. 
+Heavier particles, namely the hadrons, will move through this part of the detector and not deposit any energy. The Hadron Calorimeter (HCAL) is the next layer and is designed to stop the heavier particles.
 
-% Figure 3-5
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_3-5}
-   \includegraphics[scale=1]{fig_3-5}
-   \caption[{\lipsum*[35][1]}]{\lipsum*[35][1-5]}
-   \label{fig:fig_3-5}
+The ECAL is composed of around 80,000 lead-tungstate ($PbWO_4$) crystals that are a type of scintillator.
+Scintillators emit light when a particle deposits energy into it. So the ECAL will scintillate when light charged particles impact with the crystals.
+Since photons have no mass, you might wonder how they interact. The photon can either produce a pair of electrons that will interact with the scintillator or interact with an electron in the crystal itself.
+Since these photons and electrons are typically very energetic, they can interact multiple times and create cascades of light or ``showers'' as byproducts of the initial interaction.
+The light that is produced is directly proportional to the energy of the initial particle and therefore gives us the missing piece of the puzzle to identify photons and electrons in the detector.
+
+The HCAL is setup a little differently. Instead of crystal scintillators, it has plastic ones that are layered in between brass plates.
+The heavy particle will be stopped by the brass plate. This will cause a shower of secondary particles that are measured by the scintillators.
+Knowing what kinds of particles can decay to what final states, through the careful study of the rules of the SM, we can then reconstruct what particle hit the HCAL.
+It should be noted that the HCAL is the only part of the detector that can stop neutrally charged particles, like neutrons and some mesons, so it is very important for the CMS research program.
+
+\subsection{The Solenoid}
+
+All of the previous layers are contained in a large cylindrical electromagnet called the solenoid.
+This electromagnet provides a very large magnetic field (3.8 Tesla \footnote{A normal bar magnet is measured in millitesla!}) which causes electrically charged particles to bend due to the lorentz force.
+This effect is dependant on the energy of the particle so the information can be combined with the silicon tracker to measure the momentum of the particle.
+This magnetic field is strong enough to shift the alignment of the whole detector and this effect has to be accounted for.
+The last layer before the solenoid, the HCAL, uses brass specifically because it is non magnetic. 
+
+\subsection{The Muon Chambers}
+
+After the solenoid there is one final set of detectors. The issue these solve is due to muons\footnote{muons are always problematic!} being too heavy to be stopped by the ECAL and not heavy enough to be stopped by the HCAL.
+Muons will go through both and then be stopped by the aptly named Muon Chambers. There are three kinds of muon chambers; drift tubes, cathode strip chambers, and resistive plate chambers, all of which work under the principle that as a muons traverses them, an electron is knocked off of gas atoms.
+The amount of electrons that a muon displaces is proportional to its energy and so we can measure the energy of muons with the muons chambers.
+Another important thing to note is that, due to the many layers of this detector and the specialities of each type, the muons chamber system is very good at reducing and filtering background noise.
+
+
+\section{Jets}
+
+In describing the strong force, I mentioned that colored particles cannot exist outside of a color singlet state, meaning they must be in pairs.
+In proton-proton collisions, bare quarks (quarks NOT in a color singlet state) can be produced. As soon as they are produced they begin the process of hadronization: creating new particles out of the vacuum until no bare quarks remain.
+Gluons may also be created in proton-proton collisions but they will decay to quarks which must then undergo hadronization.
+Due to hadronization, the LHC is not able to see individual quarks and gluons. All that can be seen is the shower of hadronized quarks in the direction that the quark or gluon was moving.
+The showers are called ``Jets''. The jets are composed of constituent particles, which may in turn decay and leave traces in parts of the detector. These secondary particles are also considered constituents of the jet.
+The only particles that are not able to be counted as constituents are neutrinos as their energy is lost in the detector. 
+
+\subsection{The Particle Flow Algorithm}
+All of the information from the subdetectors is analyzed by the \textit{Particle Flow Algorithm}. This algorithm allows us to reconstruct jets with a high degree of precision.
+It start in the silicon tracker. This subdetector is the crucial part of the algorithm because it makes the initial measurement. If it misses a charged particle, it will bias any reconstruction of that particle. 
+Accordingly, great care has been taken to achieve high efficiencies. An iterative tracking strategy allows for extremely high efficiencies in the first pass with softer acceptance for follow up iterations. 
+Next, a clustering algorithm is used in the calorimeters to detect and measure the energy of stable neutral particles, separate neutral from charged particles, reconstruct charged electromagnetically charged particles, and aid in the energy measurements for low-quality tracks.
+Finally, a link algorithm links the track detected in the silicon tracker with the appropriate clustering in the calorimeter if the extrapolation of the track fits within a given cluster's boundaries.
+This is a quick overview of the algorithm because, as is usual in most high energy physics topics, a full description would be beyond the scope of this thesis.
+
+\subsection{Anti-KT Algorithm}
+
+Since most of the events at CMS will generate more than one quarks or gluon, a number of algorithms exists to correctly ``cluster'' the constituents into the right jet.
+The one we use and will describe is called the \textit{Anti-$K_t$} Algorithm. The algorithm is an iterative algorithm and runs in the following way.
+First, every PF (Particle Flow) candidate is compared against every other candidate with a distance like parameter, $d_{ij}$, given as:
+\begin{equation}
+   d_{ij} = min(\frac{1}{p_{T,i}^2},\frac{1}{p_{T,j}^2}) \frac{(y_i - y_j)^2+(\phi_i - \phi_j)^2}{R^2}
+\end{equation}
+where $R$ is a predetermined distance parameter that sets the size of the jet. The two closest constituents are paired and become a new constituent.
+This process continues, generating new ``pseudo-jets'', until the distance of the pseudo-jet from the beam is $1/p_T^2$ of the pseudo-jet. It is then removed from consideration and the process starts again with the remaining constituents until none remain.
+
+This algorithm creates what are called ``conical'' jets, with smooth, rounded edges\footnote{This does not always happen, especially with jets that are very close to each other.}.
+We call these jets AKR jets, where we use the actual value of R in the naming. Accordingly, an AK8 jet is a jet constructed with the R value of 0.8.
+We use AK8 jets and AK4 jets in this analysis. For smaller particles, jets are useful for reconstructing kinematic properties. 
+For the larger particles, heavy bosons and quarks, AKR jets can reconstruct the particle with a good degree of accuracy. A simplistic rule with this algorithm is the R value the larger the particle that can be reconstructed.
+
+\section{The Trigger}
+
+Each crossing of proton-proton bunches generates about 1 Megabyte of data. At the rate of 1 crossing every 25 nanoseconds, or 40 Megahertz, no modern computing system can actually keep up with this rate of data generation. 
+This means the majority of the data is thrown out. The system responsible for filtering through all of the data is called the ``trigger''.
+The trigger operates in two stages, the Level 1 trigger and the High Level trigger. 
+
+The level 1 trigger is a hardware trigger. Output from the detector is stored in a buffer and then it is analyzed by custom circuits. 
+These circuits look for ``interesting'' physics, such as especially large deposits in the calorimeters. 
+This stage is very useful because it allows the rejection of all but about 0.1 \% of all events.
+The rate of release to the next stage is around 50 kilohertz.
+
+The High Level trigger takes the output from level 1 and analyzes the data further in order to find interesting events.
+At this level, there are many available triggers depending on what kind of event you are looking for. The selections are mostly kinematic differences.
+This is one of the first steps in conducting an analysis. One studies the available triggers in order to understand how your kinematic selections will effect the trigger efficiency.
+
+For our analysis, the trigger algorithm used places requirements on the scalar sum of the jet transverse energy, $H_t$, jet $p_T$, and the jet groomed mass. 
+We compensate for the difference in the trigger response between data and simulation by applying a trigger scale factor, defined as the ratio of trigger efficiency in data divided by the trigger efficiency in qcd, to simulated events. 
+The trigger efficiency is defined as the ratio of the number of events passing the combined triggers and a pre-trigger to the number that pass the pre-trigger and is parameterized as a function of our measurement variable. 
+The trigger efficiency in simulation is modeled by weighting simulated events by this data-derived trigger efficiency. 
+We select events from the 2016 dataset that pass the \texttt{HLT\_HT650} trigger, the \texttt{HLT\_PFHT800} trigger or the \texttt{HLT\_PFHT900} trigger, and the \texttt{HLT\_AK8PFJet360\_TrimMass30} trigger. 
+For 2017 and 2018, we select events that pass the \texttt{HLT\_PFHT1050} and the \texttt{HLT\_AK8PFJet400\_TrimMass30} trigger are used to select events for the trigger efficiency measurement. 
+The pre-trigger for 2016, 2017, and 2018 is the \texttt{HLT\_Jet260} trigger.
+Trigger scale factors are measured as a function of the reduced mass, which will be further discussed in Chapter 5. 
+After passing the trigger, the events are required to have at least one reconstructed pp collision vertex satisfying the following criteria:
+\begin{itemize}{}
+\item Vertex number of degrees of freedom $> 4$;
+\item Absolute displacement from the beamspot position along the $z$ direction $< 4$ cm;
+\item Absolute displacement from the beamspot position along the transverse direction $< 2$ cm.
+\end{itemize}
+
+Trigger scale factors are shown here in Figures \ref{fig:fig_3-4}, \ref{fig:fig_3-5}, \ref{fig:fig_3-6}.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Figures/2016triggerMaps.pdf}
+	\caption{2016 2-Dimensional Trigger Efficiency Scale Factor.}
+	\label{fig:fig_3-4}
 \end{figure}
-
-\subsect{\lipsum*[22][6]}
-
-\lipsum[41-43]
-
-% Figure 3-6
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_3-6}
-   \includegraphics[scale=1]{fig_3-6}
-   \caption[{\lipsum*[36][1]}]{\lipsum*[36][1-2]}
-   \label{fig:fig_3-6}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Figures/2017triggerMaps.pdf}
+	\caption{2017 2-Dimensional Trigger Efficiency Scale Factor.}
+	\label{fig:fig_3-5}
 \end{figure}
-
-% Discussion
-\sect{\lipsum*[22][7]}
-
-\lipsum[44-51]
-
-% Figure 3-7
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_3-7}
-   \includegraphics[scale=1]{fig_3-7}
-   \caption[{\lipsum*[37][1]}]{\lipsum*[37][1-2]}
-   \label{fig:fig_3-7}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Figures/2018triggerMaps.pdf}
+	\caption{2018 2-Dimensional Trigger Efficiency Scale Factor.}
+	\label{fig:fig_3-6}
 \end{figure}
+\clearpage
 
-% Figure 3-8
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_3-8}
-   \includegraphics[scale=1]{fig_3-8}
-   \caption[{\lipsum*[38][1]}]{\lipsum*[38][1-2]}
-   \label{fig:fig_3-8}
-\end{figure}
+\section{Pileup}
 
-% Figure 3-9
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_3-9}
-   \includegraphics[scale=1]{fig_3-9}
-   \caption[{\lipsum*[39][1]}]{\lipsum*[39][1-2]}
-   \label{fig:fig_3-9}
-\end{figure}
+Proton-proton collision events are ideally one proton colliding into one proton. 
+However, since we collide them in bunches of protons, this is not the reality of what happens.
+Events may consist of up to 40 such proton-proton collisions. Therefore, we need to define the primary vertex.
+A vertex is a point along the beam from which some number of particle flow candidates originate from.
+The primary vertex is selected as the vertex with the highest value for the sum of the square of the transverse momenta of tracks and candidates associated.
 
-% Figure 3-10
-\begin{figure}[p]
-   \centering
-%   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{fig_3-10}
-   \includegraphics[scale=1]{fig_3-10}
-   \caption[{\lipsum*[40][1]}]{\lipsum*[40][1-2]}
-   \label{fig:fig_3-10}
-\end{figure}
+Pileup is when the jets coming from the primary vertex contain particle flow candidates that actually originate from a different vertex.
+This effect ends up smearing the actual measurement of jet mass and momentum and so we must take this effect into account.
+The choice of the AK8 and AK4 clustering algorithm is partly motivated by the fact that the Anti-$k_T$ algorithm resists these effects better than other jet clustering algorithms.
