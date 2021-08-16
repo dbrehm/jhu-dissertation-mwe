@@ -1,6 +1,6 @@
 \chapter{Beyond the Standard Model}
 \label{chap:two}
-In the last chapter we discussed the major parts of the SM, detailed some of the rules for working with it, and then talked briefly about what has been left out.
+In the previous chapter we discussed the major parts of the SM, detailed some of the rules for working with it, and then talked briefly about what has been left out.
 The SM itself actually imposes many constraints, so any BSM theory must conform to those constraints. It should also be pointed out that there have been many searches, but very little evidence, of BSM physics.
 This does not exclude BSM physics, it just creates another set of constraints that must be satisfied along with the constraints already set by the SM. One of the most pressing questions about the SM, and one of the most relevant for the following experiment, is called the hierarchy problem.
 
@@ -36,17 +36,18 @@ Figure \ref{fig:fig_2-1} is what we call a ``tree level'' diagram. We can add po
 
 Since all we do is measure the incoming and outgoing particles, we do not know which of the diagrams is physically happening. 
 The SM starts with what we call a ``bare'' mass term, in this case $m_H^{bare}$, and then when adding loops\footnote{This process of adding loops can create some wacky looking diagrams. However, even wacky diagrams can be experimentally relevant.}, it makes quantum corrections to the bare mass.
-So, the mass we measure is actually:
-\begin{equation}
-    m_H = m_H^{bare} \times ( 1 + \sum_{\text{all loops}} \text{quantum loop corrections} ) 
-    \label{eq:eq_bareMH}
-\end{equation}
-The Higgs boson is a scalar, which for our purposes, means that when adding up the corrective terms, they do not start cancelling each other out in a well controlled manner.
+The Higgs boson is a scalar, which, for our purposes, means that when adding up the corrective terms, they do not cancel each other out in a well-controlled manner.
 Since we do measure a consistent Higgs mass, theoretically it is not satisfactory that we cannot predict this mass in the SM due to the lack of control of the quantum correction terms.
 The reason that this is a problem is that in the theoretical calculations of these quantum corrections, the Higgs mass is quadratically sensitive to any scale that you introduce to the theory.
 Energy scales are introduced to quantum corrections in order to carry out a process called renormalization. Simply stated, renormalization is the process by which we can remove any non-physical values, i.e infinities, that show up in our calculations.
 This happens frequently when calculating quantum corrections so if when we try to renormalize our quantum corrections but the terms only grow in relative size, there will be a problem when we try to take a large sum of ALL possible corrections to the Higgs bare mass.
 In this case, the infinities that we tried to regulate will show up all over again. Again, since we can measure the Higgs mass, and it is definitely NOT infinity, we need to find a way to control these quantum corrections, which is where BSM physics comes in.
+The mass we measure is:
+\begin{equation}
+    m_H = m_H^{bare} \times ( 1 + \sum_{\text{all loops}} \text{quantum loop corrections} ) 
+    \label{eq:eq_bareMH}
+\end{equation}
+
 \section{Possible Solutions to the Hierarchy Problem}
 
 There are several theoretical models that propose solutions that solve the hierarchy problem. We will not detail all of these proposals, as that would take a thesis of its own. 
@@ -65,7 +66,7 @@ For our purposes, we can think of branes as the ``boundaries'' to the spacetime 
 In these WED models, we can think of the ``low energy'' versions of our theories, i.e. the SM, as ``living'' on one brane. Here living on a brane means that the fields in the field theory do not propagate into all of the available spatial dimensions, in this case the bulk.
 Then the ``high energy'' versions will live on the other and the bulk will mediate between them. The original version of these theories had only gravity propagating in the bulk, but that it is not the only thing that may propagate in the bulk of a WED theory \footnote{Other particles, namely SM fermions and bosons can propagate in the bulk.}.
 In the literature, the ``low energy'' brane is called the infrared (IR) brane and the ``high energy'' brane is called the ultraviolet (UV) brane. 
-These two scales, UV and IR, are very important for theoretical discussions of the behavior of SM theories. Since we will not delve into those details, I described what they are for your future reference.
+These two scales, UV and IR, are very important for theoretical discussions of the behavior of SM theories.
 
 In WED models, there can exist excitations, which is the mathematical way we think of particles in their respective fields, that are of the type described in Kaluza-Klein theory, so called KK excitations, and which propagate in the bulk.
 The prediction from WED is that these excitations will be spin-2 bosons called KK gravitons. These would mediate gravity in the bulk and be a way to incorporate gravity into the SM. 
@@ -85,16 +86,15 @@ These extra particles would add cancelling terms to the equation in \ref{eq:eq_b
 There are many supersymmetric models, each with small differences to account for the issues seen in the SM. We will not be able to cover all of the known supersymmetry models and will focus on the MSSM models.
 
 MSSM models make what is called the ``minimal'' extension to the standard model. These minimal extensions take each SM fermion and add a superpartner, known as a sfermion (squarks or sleptions).
-They also take each gauge field \footnote{A gauge field is the mathematical mechanism behind the SM forces. I do not introduce the machinery because it is quite extensive and would be a thesis in itself.} and add a gaugino, which is a propagating fermion for the field.
+They also take each gauge field and add a gaugino, which is a propagating fermion for the field.
 While this sounds overly simplistic, it adds its own version of complications after solving the hierarchy problem. 
 For example, if these so called superpartners are just different version of their respective particles, and with the same mass, then we should have discovered them long ago.
 Since we haven't, we must assume that there is a mass scale above which all of these superpartners live. 
 
 Again, there are several ways to accomplish this addition of mass. 
-However, they all involve a form of spontaneous symmetry breaking, recall how the Higgs field picks up a VEV, of the supersymmetry that generates all of these new particles.
+However, they all involve a form of spontaneous symmetry breaking of the supersymmetry that generates all of these new particles.
 This symmetry breaking is the underlying cause of the masses that these superpartners have. This is also very similar to the case of the electroweak interaction. 
 In both of these cases, in the UV limit of these theories, the symmetry is preserved. As soon as we move from the UV to the IR, the symmatry is broken. 
-The mathematical details here are not necessary for this thesis, so we will skip them. They also contain colloquial language that can be very confusing \footnote{For example, those of you who are theory inclined will recall that Goldstone bosons exist whenever a field breaks a symmetry and generates a VEV. When we promote that symmetry to a gauge symmetry, for some reason it is fashionable to say that the Goldstone boson is ``eaten'', which I found very confusing initially since it implies that the boson disappears instead transforming into the longitudinal polarization for the corresponding gauge field.}. 
 
 \section{Predictions of WED and MSSM}
 In the standard model (SM), the pair production of Higgs bosons ($\PH$)~\cite{HiggsDiscoveryAtlas,HiggsDiscoveryCMS,CMSHiggsLongPaper} in proton-proton ($\Pp\Pp$) collisions at $\sqrt{s} = 13\TeV$ is a rare process~\cite{deFlorian:2013jea}.
@@ -106,7 +106,10 @@ The free parameters of the model are $\kappa / \overline{\Mpl}$ and the UV cutof
 In $\Pp\Pp$ collisions, the graviton and the radion are produced primarily through gluon-gluon fusion and are predicted to decay to $\PH\PH$~\cite{Oliveira:2014kla}.
 
 Other scenarios, such as the two-Higgs doublet models~\cite{Branco:2011iw} (in particular, the minimal supersymmetric model~\cite{Djouadi:2005gj}) and the Georgi-Machacek model~\cite{GEORGI1985463} predict spin-0 resonances that are produced primarily through gluon-gluon fusion, and decay to an $\PH\PH$ pair.
-These particles have the same Lorentz structure and effective couplings to the gluons and, for narrow widths, result in the same kinematic distributions as those for the bulk radion.
+These particles have the same Lorentz structure and effective couplings to the gluons and, for narrow widths, result in the same kinematic distributions as those for the bulk radion. 
+We will focus on the decays of $H \rightarrow bb$, although other decays are also possible, but this one has the largest BR (58\%)
+We need to create BSM particle X that decays to HH pair, so we need a high energy collider (the higher the energy, the better).  We als need to reconstruct each H->bb, so we need a detector.
+In the next chapter we will discuss the collider and detector that we use.
 
 % Searches for a new particle $\PX$ in the $\PH\PH$ decay channel have been performed by the
 % ATLAS~\cite{Aad:2014yja, Aad:2015uka, Aad:2015xja} and

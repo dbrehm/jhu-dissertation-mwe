@@ -2,11 +2,11 @@
 \label{chap:four}
 The analysis we perform will be looking for 2 Higgs bosons which decay into 4 total b quarks.
 The 4b final state will decay into jets. 
-We are able to identify these jets resulting from pairs of b quarks because the parent Higgs jets are identifiable with a high degree of accuracy.
-The following sections will detail how we do this.
+Jets resulting from pairs of b quarks are identifiable because the parent Higgs jets are identifiable with a high degree of accuracy.
+The following sections will detail how this is accomplished.
 \section{Soft-Drop Mass Algorithm}
 
-As we have stated, the decay signature of the Higgs boson we are looking for is a pair of b quarks.
+As previously stated, the decay signature of the Higgs boson we are looking for is a pair of b quarks.
 When heavy particles, like the Higgs boson, decay to a pair of quarks, the angle between those two quarks is dependant only on the velocity of the parent heavy particle\footnote{This is for the lab frame. In the rest frame of the parent particle the two quarks will decay back to back.}.
 Low energy Higgs will produced two distinct b quark jets where high energy Higgs will produce a collimated, also called ``boosted'', single jet.
 Since we then are concerned with the energy of the parent particle, it is important for us to accurately determine if we are looking at the parent particle or not.
@@ -25,7 +25,7 @@ Since we use this as a discriminator for heavy particle jets and their decays, w
 
 \section{Deep AK8 Mass Decorrelated Tagger}
 
-The other way we will be tagging our Higgs bosons is through exploiting the information that is gained when creating particle flow candidates and using a machine learning algorithm to decay hadronically decaying heavy particles, like the Higgs boson.
+Anotehr way to tag Higgs bosons is through exploiting the information that is gained when creating particle flow candidates and using a machine learning algorithm to identify hadronically decaying heavy particles, like the Higgs boson.
 The algorithm also further delineates the decay product into decay modes, i.e. a Higgs to two b quarks. This algorithm is called \textit{Deep-AK8}.
 The algorithm begins by defining two lists of inputs. The first list is a list of 100\footnote{Typically, jets do not have more than 100 constituent particles so using this cap contributes to a negligible loss of information.} jet constituent particles list in decreasing $p_T$.
 Measured properties of each particle, $p_T$, the energy deposit, the charge, the angular separation between the particle and the
@@ -33,7 +33,7 @@ jet axis, etc., are used to help the algorithm extract features related to the s
 Charged particle will also have information from tracking including track quality and displacement.
 These features are especially useful for identifying heavy flavour quarks, like the b quark. In total there are 42 pieces of information for each particle in the list.
 
-The second list is comprised of secondary vertex information. If you recall, the primary vertex relates to the location of the initial proton-proton collision.
+The second list is comprised of secondary vertex information. Recall that the primary vertex relates to the location of the initial proton-proton collision.
 The secondary vertex relates to the location of the next decay. So then this can be useful for identifying decaying products.
 Notably, the b quark has a longer lifetime than other quarks, so its decay vertex, the secondary vertex, is very useful in its identification. This is shown pictorially in Figure \ref{fig:fig_4-1}.
 This list will contain up to 7 secondary vertices as well as kinematic information about the vertices, displacement, and quality of the vertices.
@@ -61,7 +61,7 @@ The network architecture is shown in Figure \ref{fig:fig_4-2}.
     \label{fig:fig_4-2}
  \end{figure}
 \subsection{Custom Neural Network}
-If, like we are, one wants to use mass as a discriminating variable, then a mass-decorrelated version of the DeepAK8 algorithm is used.
+If one wants to use mass as a discriminating variable, then a mass-decorrelated version of the DeepAK8 algorithm is used.
 This will add a feature to the network architecture that acts as a mass prediction score. This score then acts as a penalty weight to prevent the network from extracting features that correlate with mass.
 This allows the algorithm to become largely mass independent. This will decrease the power of the algorithm. The network architecture is shown in Figure \ref{fig:fig_4-3}.
 The training of the DeepAK8-MD tagger was conducted on jets with a softdrop mass ($m_{SD})$ between 30 and 250 $GeV$ so any jet outside of that range should not be used in conjunction with this algorithm.
@@ -75,7 +75,7 @@ The training of the DeepAK8-MD tagger was conducted on jets with a softdrop mass
 
 \subsection{Advantages}
 
-A similar analysis to the one we have done was performed with a different tagging algorithm and on only the 2016 data.
+A similar analysis to the one performed in this analysis was completed with a different tagging algorithm and on only the 2016 data.
 This ``Double B'' tagger worked by using a boosted decision tree learning algorithm to assign a score to the jet measuring the likelihood that it contains two b quarks.
 It is also mass and $p_T$ independent. At the time of that analysis, it was the best performing tagger available. However, it had drawbacks.
 The biggest drawback is that, while it attempted to use jet substructure information, it needed to be supplemented with directly measured substructure variables.
